@@ -1,13 +1,15 @@
 <template>
     <div style="height:2000px">
-      1233
+      <test></test>
     </div>
   </template>
   
   <script>
-  
+  import test from './test/test.vue'
   export default {
-  
+    components: {
+    test
+  }
   }
   </script>
   
