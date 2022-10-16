@@ -1,17 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="flex mt-[40px] fixed top-0 right-[0%] w-[100%] max-w-[1900px]">
+        <div class="flex mr-[40%]">
+          <div class="">
+            <img src="@/assets/Logo.svg" class="header-logo">
+          </div>
+          <div class="">
+            <img src="@/assets/SC_Logo.svg" class="header-logo">
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="mr-[20px] leading-[56px]">Features</div>
+          <div class="mr-[20px] leading-[56px]" @click="go">Promotions</div>
+          <div class="mr-[20px] leading-[56px]">About us</div>
+          <div class="mr-[20px] leading-[56px]">FAQ</div>
+          <div class="mr-[20px] header-button">Get Mox</div>
+        </div>
+      </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import router from '@/router';
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  methods:{
+    go(){
+      router.push('/promote')
+    }
   }
 }
 </script>
